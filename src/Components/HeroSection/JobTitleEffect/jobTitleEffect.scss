@@ -1,0 +1,85 @@
+@import "../../../Utils/colors";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+.typing {
+  font-family: "Fira Code", monospace;
+
+  position: relative;
+
+  white-space: nowrap;
+
+  &.hide {
+    animation: 1s cubic-bezier(1, -0.07, 1, 1.01) both hide;
+  }
+  * {
+    font-family: "Fira Code", monospace;
+    white-space: nowrap;
+  }
+}
+
+.job-title {
+  position: relative;
+
+  animation: 0.7s cubic-bezier(0, 0, 0, 0.97) both job-title-in;
+  animation-delay: -0.2s;
+
+  background: #9774da;
+  background: linear-gradient(45deg, #9774da, #386296);
+  color: $white;
+
+  padding: 0 10px;
+
+  border-radius: 10px;
+  text-align: center;
+
+  overflow: hidden;
+
+  .text {
+    position: relative;
+    animation: 0.7s cubic-bezier(0, 0, 0, 0.97) both text-in;
+  }
+}
+
+.gray {
+  color: #808080;
+}
+.white {
+  color: #fff;
+}
+
+.blue {
+  color: #5294ca;
+}
+.lightblue {
+  color: #76a3ba;
+}
+.orange {
+  color: #c48a73;
+}
+@keyframes job-title-in {
+  0% {
+    opacity: 0;
+    height: 0px;
+    width: 500px;
+  }
+  100% {
+    opacity: 1;
+    width: 184px;
+  }
+}
+@keyframes text-in {
+  0% {
+    left: 60px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@keyframes hide {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: 20px;
+  }
+}

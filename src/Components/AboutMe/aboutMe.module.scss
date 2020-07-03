@@ -1,0 +1,39 @@
+@import "../../Utils/colors";
+
+.about-me {
+  padding: 100px 10vw;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  color: $black;
+
+  .title {
+    font-size: 20pt;
+    font-weight: 600;
+    background: $gradientFirstColor;
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+  p {
+    line-height: 1;
+    margin: 10px 0;
+
+    b {
+      background: $gradientFirstColor;
+      background: $gradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+    }
+  }
+}

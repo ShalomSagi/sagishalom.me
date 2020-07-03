@@ -1,0 +1,49 @@
+@import "../../Utils/colors";
+
+.skills {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    font-size: 20pt;
+    font-weight: 600;
+
+    margin: 10px 0;
+
+    background: $gradientFirstColor;
+    background: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+
+  .effectWrapper.in-progress {
+    width: 448px;
+    max-width: 80vw;
+  }
+
+  .skills-list {
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: center;
+
+    max-width: 94vw;
+    .stack {
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+    }
+  }
+}

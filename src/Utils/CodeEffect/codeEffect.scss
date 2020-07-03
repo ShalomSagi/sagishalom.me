@@ -1,0 +1,47 @@
+.code {
+  * {
+    animation: 1s ease 0s both pulse;
+  }
+}
+.result {
+  animation: 1s ease 0s both result;
+}
+
+.visibility-checker {
+  &::before {
+    content: "...";
+    color: rgba(0, 0, 0, 0);
+  }
+}
+
+@for $i from 1 through 5 {
+  .code {
+    // :nth-child(1-9)
+    .line-#{$i} {
+      // Delay the animation. Delay increases as items loop.
+      animation-delay: $i * (1s / 18);
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes result {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

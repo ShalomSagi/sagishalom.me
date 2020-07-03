@@ -1,0 +1,64 @@
+@import "./colors";
+
+.square {
+  content: url(/assets/shapes/square.svg);
+  width: 50vw;
+
+  &.top-right {
+    position: absolute;
+    animation: 2s cubic-bezier(0, -0.03, 0, 0.97) both top-right;
+    animation-delay: 1s;
+  }
+  &.center-right {
+    position: absolute;
+    animation: 2s cubic-bezier(0, -0.03, 0, 0.97) both center-right;
+
+    top: 0;
+    animation-delay: 1s;
+  }
+  &.bottom-left {
+    position: absolute;
+    animation: 1.7s cubic-bezier(0, -0.03, 0, 0.97) both bottom-left;
+    animation-delay: 1.3s;
+  }
+}
+
+@keyframes top-right {
+  0% {
+    top: -600px;
+    right: -600px;
+    transform: rotate(15deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: -250px;
+    right: -250px;
+    transform: rotate(-15deg);
+  }
+}
+
+@keyframes bottom-left {
+  0% {
+    bottom: -600px;
+    left: -600px;
+    transform: rotate(60deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    bottom: -250px;
+    left: -250px;
+    transform: rotate(30deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .square {
+    width: 500px;
+  }
+}

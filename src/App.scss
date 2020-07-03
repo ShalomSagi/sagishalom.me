@@ -1,0 +1,15 @@
+.double {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  padding: 20px 10px;
+
+  & > * {
+    width: 50%;
+    min-width: 415px;
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../../Utils/colors";
+
+.skills-group {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 10px 20px;
+
+  border-radius: 8px;
+
+  margin: 10px;
+
+  background-color: lighten($white, 5);
+
+  p {
+    margin: 5px 0;
+    line-height: 1.2;
+    text-align: left;
+    color: $black;
+  }
+}
