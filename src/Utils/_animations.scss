@@ -2,6 +2,8 @@
   * {
     position: relative;
     animation: 1s cubic-bezier(0.61, 0.01, 0.11, 0.96) both up;
+    -moz-animation: 1s cubic-bezier(0.61, 0.01, 0.11, 0.96) both up;
+    -webkit-animation: 1s cubic-bezier(0.61, 0.01, 0.11, 0.96) both up;
   }
 }
 
@@ -16,6 +18,32 @@
 }
 
 @keyframes up {
+  0% {
+    opacity: 0;
+    top: 30px;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+@-moz-keyframes up {
+  0% {
+    opacity: 0;
+    top: 30px;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes up {
   0% {
     opacity: 0;
     top: 30px;
