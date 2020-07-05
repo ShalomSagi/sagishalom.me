@@ -2,4 +2,37 @@ $white: #e8e8e8;
 $black: #282828;
 $gradientFirstColor: #9774da;
 $gradientLastColor: #386296;
-$gradient: linear-gradient(45deg, #9774da, #386296);
+$gradient: linear-gradient(45deg, $gradientFirstColor, $gradientLastColor);
+$longGradient: linear-gradient(
+  45deg,
+  $gradientLastColor,
+  $gradientFirstColor,
+  $gradientLastColor,
+  $gradientFirstColor
+);
+$invertedGradient: linear-gradient(
+  45deg,
+  $gradientLastColor,
+  $gradientFirstColor
+);
+
+%title {
+  font-size: 20pt;
+  font-weight: 600;
+
+  margin: 10px 0;
+
+  background: #bbbbbb;
+  // background: $gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+@media (max-width: 850px) {
+  %title {
+    text-align: center;
+  }
+}
