@@ -6,20 +6,20 @@ import VisibilitySensor from "react-visibility-sensor";
 class CodeEffect extends Component {
   state = { animadionDone: false, visible: false };
 
-  //Showing the real HTML of the element
+  //Parsing the HTML of the component as text
   reactComponentsAsText = (components, asText = false) => {
-    let displayedCode = []; //An array of the children components as text
+    let displayedCode = [];
 
     if (Array.isArray(components)) {
       components.forEach((component) => {
-        //Displaying the props
-        const propsObj = { ...component.props }; //Creating an object with all the props of the child components
-        const displayProps = []; //This array will be displayed later
+        const propsObj = { ...component.props };
+        const attributes = [];
+
         //Ignore children for now, will be dealt with later
         if ("children" in propsObj) delete propsObj.children;
         Object.keys(propsObj).forEach((prop) => {
           if (typeof propsObj[prop] !== "undefined") {
-            displayProps.push(
+            attributes.push(
               //Replacing the className prop with the more popular "class" attribute
               `${prop === "className" ? "class" : prop}="${
                 prop === "className" && propsObj[prop].includes("_")
@@ -37,14 +37,12 @@ class CodeEffect extends Component {
         }
 
         //Displating the children components.
-        let child = "..."; //If somthing fails, it will show "..."
+        let child = "...";
         try {
           if (typeof component.props !== "undefined") {
             if (typeof component.props.children === "string") {
-              //Handling text as child)
               child = component.props.children;
             } else {
-              //Looping again throw the children, but this time text is expected to be returned
               child = this.reactComponentsAsText(
                 component.props.children,
                 true
@@ -52,29 +50,27 @@ class CodeEffect extends Component {
             }
           }
         } catch (e) {}
-        //Pushes the information that was taken from the component as text to the "text" array
+
         if (Array.isArray(child)) {
           child.forEach((childElement) => {
             displayedCode.push(childElement);
           });
         } else {
           displayedCode.push(
-            `<${componnentType} ${
-              displayProps.length !== 0 ? displayProps.join(" ") : ""
-            }>${child}</${componnentType}>`
+            `<${componnentType} ${attributes.join(
+              " "
+            )}>${child}</${componnentType}>`
           );
         }
       });
-      //If there is only one children
     } else {
-      //Displaying the props
-      const propsObj = { ...components.props }; //Creating an object with all the props of the child components
-      const displayProps = []; //This array will be displayed later
+      const propsObj = { ...components.props };
+      const attributes = [];
+
       //Ignore children for now, will be dealt with later
       if ("children" in propsObj) delete propsObj.children;
       Object.keys(propsObj).forEach((prop) => {
-        //Replacing the className prop with the more popular "class" attribute
-        displayProps.push(
+        attributes.push(
           //Replacing the className prop with the more popular "class" attribute
           `${prop === "className" ? "class" : prop}="${
             prop === "className" && propsObj[prop].includes("_")
@@ -84,29 +80,26 @@ class CodeEffect extends Component {
         );
       });
 
-      let child = "..."; //If somthing fails, it will show "..."
+      let child = "...";
       try {
         if (typeof components.props !== "undefined") {
           if (typeof components.props.children === "string") {
-            //Handling text as child
             child = components.props.children;
           } else {
-            //Looping again throw the children, but this time text is expected to be returned
             child = this.reactComponentsAsText(components.props.children, true);
           }
         }
       } catch (e) {}
 
-      //Pushes the information that was taken from the component as text to the "text" array
       if (Array.isArray(child)) {
         child.forEach((childElement) => {
           displayedCode.push(childElement);
         });
       } else {
         displayedCode.push(
-          `<${components.type} ${
-            displayProps.length !== 0 ? displayProps.join(" ") : ""
-          }>${child}</${components.type}>`
+          `<${components.type} ${attributes.join(" ")}>${child}</${
+            components.type
+          }>`
         );
       }
     }
@@ -115,7 +108,9 @@ class CodeEffect extends Component {
     if (!asText) {
       setTimeout(() => {
         this.setState({ animadionDone: true });
-        this.props.doneHandler();
+        if (this.props.doneHandler) {
+          this.props.doneHandler();
+        }
       }, 55.56 * displayedCode.length + 900);
     }
 
@@ -153,6 +148,7 @@ class CodeEffect extends Component {
         content = <div className="result">{this.props.children}</div>;
       }
     }
+
     return (
       <VisibilitySensor
         partialVisibility
