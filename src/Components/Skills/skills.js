@@ -11,7 +11,9 @@ class Skills extends Component {
   render() {
     return (
       <div className={classes.skills}>
-        <div className={classes.title}>What Can I Do?</div>
+        <CodeEffect>
+          <div className={classes.title}>Skills</div>
+        </CodeEffect>
         <div
           className={`${classes.effectWrapper} ${
             !this.state.animationDone ? classes["in-progress"] : ""
@@ -24,7 +26,6 @@ class Skills extends Component {
           >
             <div className={classes["skills-list"]}>
               <SkillsGroup
-                title="Code"
                 skills={[
                   "JavaScript ES2018",
                   "HTML",
@@ -41,7 +42,6 @@ class Skills extends Component {
 
               <div className={classes.stack}>
                 <SkillsGroup
-                  title="Code"
                   skills={[
                     "Adobe After Effects",
                     "Adobe Illustrator",
@@ -51,12 +51,11 @@ class Skills extends Component {
                   ]}
                 />
                 <SkillsGroup
-                  title="Code"
                   skills={[
-                    "Passionate",
                     "Team player",
                     "Self-learning",
                     "Working under pressure",
+                    "Creative",
                   ]}
                 />
               </div>
