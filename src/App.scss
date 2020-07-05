@@ -1,15 +1,28 @@
+@import "./Utils/colors";
 .double {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-
-  width: 100vw;
-  padding: 20px 10px;
+  align-items: baseline;
+  position: relative;
+  max-width: 100vw;
+  box-sizing: content-box;
+  padding: 0 10px 20px;
 
   & > * {
     width: 50%;
     min-width: 415px;
+    padding: 0 20px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
   }
 }
