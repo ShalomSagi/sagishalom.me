@@ -1,0 +1,8 @@
+@import "../../Utils/colors";
+
+.title {
+  @extend %title;
+}
+.employment {
+  max-width: 400px;
+}
