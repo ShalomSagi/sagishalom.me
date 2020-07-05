@@ -1,0 +1,10 @@
+@import "../../Utils/colors";
+.title {
+  @extend %title;
+  text-align: left;
+}
+
+.freelance {
+  width: 100%;
+  max-width: 450px;
+}
