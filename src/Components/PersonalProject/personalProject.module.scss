@@ -1,0 +1,6 @@
+@import "../../Utils/colors";
+.title {
+  @extend %title;
+
+  text-align: center;
+}
