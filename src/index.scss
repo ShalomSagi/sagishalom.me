@@ -2,11 +2,12 @@
 @import "./Utils/colors";
 
 body {
-  box-sizing: border-box;
   margin: 0;
   background-color: $white;
 }
 
 * {
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  outline: none;
 }
