@@ -1,10 +1,14 @@
 .code {
   * {
     animation: 1s ease 0s both pulse;
+    -moz-animation: 1s ease 0s both pulse;
+    -webkit-animation: 1s ease 0s both pulse;
   }
 }
 .result {
   animation: 1s ease 0s both result;
+  -moz-animation: 1s ease 0s both result;
+  -webkit-animation: 1s ease 0s both result;
 }
 
 .visibility-checker {
@@ -37,7 +41,49 @@
     opacity: 0;
   }
 }
+@-moz-keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes result {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes result {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes result {
   0% {
     opacity: 0;
   }
