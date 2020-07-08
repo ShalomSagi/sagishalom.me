@@ -140,7 +140,10 @@ class CodeEffect extends Component {
     if (this.state.visible) {
       if (!this.state.animadionDone) {
         content = (
-          <div className="code">
+          <div
+            className={`code ${this.props.className || ""}`}
+            style={this.props.style}
+          >
             {this.reactComponentsAsText(this.props.children)}
           </div>
         );
