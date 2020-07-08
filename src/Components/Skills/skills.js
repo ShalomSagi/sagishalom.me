@@ -4,6 +4,7 @@ import "../../Utils/_shapes.scss";
 
 import SkillsGroup from "./SkillsGroup/skillsGroup";
 import CodeEffect from "../../Utils/CodeEffect/codeEffect";
+import Languages from "../Languages/languages";
 
 class Skills extends Component {
   state = { animationDone: false };
@@ -11,9 +12,10 @@ class Skills extends Component {
   render() {
     return (
       <div className={classes.skills}>
-        <CodeEffect>
+        <CodeEffect style={{ margin: "70px 0", textAlign: "center" }}>
           <div className={classes.title}>Skills</div>
         </CodeEffect>
+        <Languages />
         <div
           className={`${classes.effectWrapper} ${
             !this.state.animationDone ? classes["in-progress"] : ""
@@ -23,6 +25,7 @@ class Skills extends Component {
             doneHandler={() => {
               this.setState({ animationDone: true });
             }}
+            style={{ minHeight: "350px" }}
           >
             <div className={classes["skills-list"]}>
               <SkillsGroup
