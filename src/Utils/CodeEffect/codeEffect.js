@@ -9,7 +9,6 @@ class CodeEffect extends Component {
   //Parsing the HTML of the component as text
   reactComponentsAsText = (components, asText = false) => {
     let displayedCode = [];
-
     if (Array.isArray(components)) {
       components.forEach((component) => {
         const propsObj = { ...component.props };

@@ -1,14 +1,11 @@
 import React from "react";
 import classes from "./employmentHistory.module.scss";
 import InfoBox from "../../Utils/InfoBox/infoBox";
-import CodeEffect from "../../Utils/CodeEffect/codeEffect";
 
 const EmploymentHistory = (props) => {
   return (
     <div className={classes.employment}>
-      <CodeEffect className={classes.center} style={{ margin: "70px 0" }}>
-        <div className={classes.title}>Employment History</div>
-      </CodeEffect>
+      <div className={classes.title}>Employment History</div>
       <InfoBox
         time="August 2019 - August 2020"
         title="Fullstack developer"
