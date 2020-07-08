@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "./aboutMe.module.scss";
 import CodeEffect from "../../Utils/CodeEffect/codeEffect";
 
@@ -26,10 +26,11 @@ const AboutMe = () => {
           <div className={classes.center}>
             <a
               href="/download/CV-Sagi-Shalom.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className={classes.download}
-              download="CV - Sagi Shalom.pdf"
             >
-              Download My CV
+              Take a look at my CV
             </a>
           </div>
         </CodeEffect>
