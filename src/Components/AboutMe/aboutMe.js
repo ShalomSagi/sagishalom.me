@@ -5,11 +5,13 @@ import CodeEffect from "../../Utils/CodeEffect/codeEffect";
 const AboutMe = () => {
   return (
     <div className={classes["about-me"]}>
-      <CodeEffect>
+      <CodeEffect
+        style={{ fontSize: "15pt", margin: "10px 0", padding: "8px 0 0 " }}
+      >
         <div className={classes.title}>Who Am I?</div>
       </CodeEffect>
       <div className={classes.content}>
-        <CodeEffect>
+        <CodeEffect className={classes.code}>
           <p>
             <b>Passionate front-end developer</b> with back-end experience and a
             strong sense for aesthetics.
