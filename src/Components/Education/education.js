@@ -5,20 +5,20 @@ import CodeEffect from "../../Utils/CodeEffect/codeEffect";
 const Education = () => {
   return (
     <div className={classes.education}>
-      <CodeEffect>
+      <CodeEffect className={classes.center} style={{ margin: "70px 0" }}>
         <div className={classes.title}>Education</div>
       </CodeEffect>
       <InfoBox
         time="September 2015 - April 2017"
         title="Cinematography"
         at="at Ort Psagot, Karmiel"
-        citation="Practical Engineering - Majoring Animation"
+        achievements={["Practical Engineering - Majoring Animation."]}
       />
       <InfoBox
         time="July 2015"
         title="Graduated Highschool"
         at="at Ort Psagot, Karmiel"
-        citation="Matriculation certificate."
+        achievements={["Matriculation certificate."]}
       />
     </div>
   );
