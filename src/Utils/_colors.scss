@@ -3,13 +3,6 @@ $black: #282828;
 $gradientFirstColor: #9774da;
 $gradientLastColor: #386296;
 $gradient: linear-gradient(45deg, $gradientFirstColor, $gradientLastColor);
-$longGradient: linear-gradient(
-  45deg,
-  $gradientLastColor,
-  $gradientFirstColor,
-  $gradientLastColor,
-  $gradientFirstColor
-);
 $invertedGradient: linear-gradient(
   45deg,
   $gradientLastColor,
