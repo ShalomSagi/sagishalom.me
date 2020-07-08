@@ -6,12 +6,12 @@ import CodeEffect from "../../Utils/CodeEffect/codeEffect";
 const EmploymentHistory = (props) => {
   return (
     <div className={classes.employment}>
-      <CodeEffect>
+      <CodeEffect className={classes.center} style={{ margin: "70px 0" }}>
         <div className={classes.title}>Employment History</div>
       </CodeEffect>
       <InfoBox
         time="August 2019 - August 2020"
-        title="Full-stack developer"
+        title="Fullstack developer"
         at="at IDF Spokesperson Unit"
         achievements={[
           "Developed complex web apps using React & Node.js.",
