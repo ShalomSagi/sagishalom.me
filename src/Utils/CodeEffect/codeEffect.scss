@@ -18,7 +18,7 @@
   }
 }
 
-@for $i from 1 through 5 {
+@for $i from 1 through 15 {
   .code {
     // :nth-child(1-9)
     .line-#{$i} {
