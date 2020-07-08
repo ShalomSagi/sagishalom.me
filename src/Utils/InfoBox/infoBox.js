@@ -4,7 +4,10 @@ import CodeEffect from "../CodeEffect/codeEffect";
 
 const InfoBox = (props) => {
   return (
-    <CodeEffect>
+    <CodeEffect
+      className={classes.center}
+      style={{ minHeight: `${props.achievements.length * 41 + 83}px` }}
+    >
       <div className={classes["history-item"]}>
         <div className={classes["title-area"]}>
           <div className={classes.time}>{props.time}</div>
@@ -13,7 +16,7 @@ const InfoBox = (props) => {
             <div className={classes.at}>{props.at}</div>
           </div>
         </div>
-        <div className={props.achievements ? classes.achievements : ""}>
+        <div className={classes.achievements}>
           {props.achievements
             ? props.achievements.map((achievement, index) => {
                 return (
