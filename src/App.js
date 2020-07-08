@@ -4,9 +4,10 @@ import AboutMe from "./Components/AboutMe/aboutMe";
 import Skills from "./Components/Skills/skills";
 import EmploymentHistory from "./Components/EmploymentHistory/employmentHistory";
 import Education from "./Components/Education/education";
-import PersonalProject from "./Components/PersonalProject/personalProject";
+import PersonalProjects from "./Components/PersonalProjects/personalProjects";
 import Freelance from "./Components/Freelance/freelance";
 import Languages from "./Components/Languages/languages";
+import Media, { Mobile, Desktop } from "./Utils/Media/media";
 
 import "./App.scss";
 
@@ -16,18 +17,11 @@ function App() {
       {/* <Header /> */}
       <HeroSection />
       <AboutMe />
-      <Languages />
-      <div className="double">
-        <div className="row">
-          <EmploymentHistory />
-          <Freelance />
-        </div>
-        <div className="row">
-          <Skills />
-          <Education />
-          <PersonalProject />
-        </div>
-      </div>
+
+      <EmploymentHistory />
+      <PersonalProjects />
+      <Education />
+      <Skills />
     </div>
   );
 }
