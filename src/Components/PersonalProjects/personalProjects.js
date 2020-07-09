@@ -8,7 +8,7 @@ const PersonalProject = () => {
     <div>
       <div className={classes.title}>Personal Project</div>
       <InfoBox
-        title="Fullstack & UI/UX"
+        title="Full Stack & UI/UX"
         time="May 2019 - March 2020"
         at="at SchoolFlix"
         achievements={[
