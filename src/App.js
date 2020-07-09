@@ -5,9 +5,7 @@ import Skills from "./Components/Skills/skills";
 import EmploymentHistory from "./Components/EmploymentHistory/employmentHistory";
 import Education from "./Components/Education/education";
 import PersonalProjects from "./Components/PersonalProjects/personalProjects";
-import Freelance from "./Components/Freelance/freelance";
-import Languages from "./Components/Languages/languages";
-import Media, { Mobile, Desktop } from "./Utils/Media/media";
+import Footer from "./Components/Footer/footer";
 
 import "./App.scss";
 
@@ -22,6 +20,8 @@ function App() {
       <PersonalProjects />
       <Education />
       <Skills />
+
+      <Footer />
     </div>
   );
 }
