@@ -8,7 +8,7 @@ const EmploymentHistory = (props) => {
       <div className={classes.title}>Employment History</div>
       <InfoBox
         time="August 2019 - August 2020"
-        title="Fullstack developer"
+        title="Full Stack developer"
         at="at IDF Spokesperson Unit"
         achievements={[
           "Developed complex web apps using React & Node.js.",
