@@ -3,7 +3,11 @@ import classes from "./skillsGroup.module.scss";
 
 const SkillsGroup = (props) => {
   return (
-    <div className={classes["skills-group"]}>
+    <div
+      className={`${classes["skills-group"]} ${
+        props.isVisible ? "fade-in-bottom" : "zero-opacity"
+      }`}
+    >
       {props.skills.map((skill, index) => (
         <p key={index}>{skill}</p>
       ))}
