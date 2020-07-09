@@ -154,6 +154,7 @@ class CodeEffect extends Component {
     return (
       <VisibilitySensor
         partialVisibility
+        offset={{ top: 20 }}
         onChange={(isVisible) => {
           this.enteredTheScreen(isVisible);
         }}
