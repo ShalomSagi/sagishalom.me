@@ -16,7 +16,6 @@ const AboutMe = () => {
             <b>Passionate front-end developer</b> with back-end experience and a
             strong sense for aesthetics.
           </p>
-          <p>Gained experience in the military.</p>
           <p>
             <b>Technology enthusiastic</b> with the ability and the desire to
             learn new subjects.

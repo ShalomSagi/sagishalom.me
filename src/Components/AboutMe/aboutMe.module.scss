@@ -8,7 +8,6 @@
   flex-direction: column;
 
   align-items: center;
-  justify-content: center;
 
   background-color: lighten($white, 5);
 
@@ -33,7 +32,7 @@
   }
 
   .code {
-    min-height: 224px;
+    min-height: 195px;
   }
 
   p {
@@ -93,6 +92,6 @@
 
 @media (max-width: 840px) {
   .code {
-    min-height: 281px !important;
+    min-height: 252px !important;
   }
 }
