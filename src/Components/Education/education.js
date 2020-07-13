@@ -9,7 +9,7 @@ const Education = () => {
         time="September 2015 - April 2017"
         title="Cinematography"
         at="at Ort Psagot, Karmiel"
-        achievements={["Practical Engineering - Majoring Animation."]}
+        achievements={["Practical Engineering, Majoring Animation."]}
       />
       <InfoBox
         time="July 2015"

@@ -17,7 +17,7 @@ class CodeWriterEffect extends Component {
       color: "gray",
     },
     {
-      text: "div ",
+      text: "h1 ",
       color: "blue",
     },
     {
@@ -45,7 +45,7 @@ class CodeWriterEffect extends Component {
       color: "gray",
     },
     {
-      text: "div",
+      text: "h1",
       color: "blue",
     },
     {
