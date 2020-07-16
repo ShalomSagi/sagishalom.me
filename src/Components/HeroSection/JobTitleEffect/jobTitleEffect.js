@@ -17,7 +17,7 @@ class CodeWriterEffect extends Component {
       color: "gray",
     },
     {
-      text: "h1 ",
+      text: "span ",
       color: "blue",
     },
     {
@@ -45,7 +45,7 @@ class CodeWriterEffect extends Component {
       color: "gray",
     },
     {
-      text: "h1",
+      text: "span",
       color: "blue",
     },
     {
@@ -115,7 +115,7 @@ class CodeWriterEffect extends Component {
     if (this.state.isDoneTyping) {
       displayedElement = (
         <div className="job-title">
-          <div className="text">{this.props.text}</div>
+          <span className="text">{this.props.text}</span>
         </div>
       );
     } else {
