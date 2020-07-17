@@ -11,10 +11,10 @@ const EmploymentHistory = (props) => {
         title="Full Stack developer"
         at="at IDF Spokesperson Unit"
         achievements={[
-          "Developed complex web apps using React & Node.js.",
+          "Developed complex web apps using React, Redux, Node.js & TypeScript.",
           "Worked with CSS & SASS.",
           "Maintained Angular projects.",
-          "Worked with NoSQL (MongoDB).",
+          "Worked with MongoDB.",
           "Worked with Microsoft Azure.",
           "Integrated CI/CD pipelines.",
           "Worked with IDF’s highest ranking officers.",

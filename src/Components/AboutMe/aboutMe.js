@@ -13,8 +13,8 @@ const AboutMe = () => {
       <div className={classes.content}>
         <CodeEffect className={classes.code}>
           <p>
-            <b>Passionate front-end developer</b> with back-end experience and a
-            strong sense for aesthetics.
+            <b>Passionate web developer</b> with both front-end and back-end
+            experience and a strong sense for aesthetics.
           </p>
           <p>
             <b>Technology enthusiastic</b> with the ability and the desire to

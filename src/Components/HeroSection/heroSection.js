@@ -54,7 +54,7 @@ class HeroSection extends Component {
         <h1>Sagi Shalom</h1>
         <JobTitleEffect
           onAnimationOver={this.animationIsDone}
-          text="Front-End Developer"
+          text="Web Developer"
         />
       </div>
     );
