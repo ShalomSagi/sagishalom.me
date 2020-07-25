@@ -6,7 +6,7 @@ import CodeEffect from "../../Utils/CodeEffect/codeEffect";
 const PersonalProject = () => {
   return (
     <div>
-      <div className={classes.title}>Personal Project</div>
+      <div className={classes.title}>Personal Projects</div>
       <InfoBox
         title="Full Stack & UI/UX"
         time="May 2019 - March 2020"
