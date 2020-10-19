@@ -1,11 +1,8 @@
 ## My Resume
 
 Hello!
+
 My name is Sagi Shalom and I am a Web developer with both Front-End and Back-end experience.
-
-I am currently looking for a job around Tel-Aviv / Haifa.
-
-If you like what you see here, please contact me!
 
 ### Contact me
 
