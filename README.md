@@ -16,6 +16,6 @@ My name is Sagi Shalom and I am a Web developer with both Front-End and Back-end
 
 #### Visit Me
 
-[ Website](https://sagishalome.me)
+[ Website](https://sagishalom.me)
 
 [Linkedin](http://linkedin.com/in/sagishalom)
