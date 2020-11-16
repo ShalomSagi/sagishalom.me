@@ -1,9 +1,3 @@
-## My Resume
-
-Hello!
-
-My name is Sagi Shalom and I am a Web developer with both Front-End and Back-end experience.
-
 ### Contact me
 
 #### Talk To Me
