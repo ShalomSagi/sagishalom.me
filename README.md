@@ -1,5 +1,3 @@
-### Contact me
-
 #### Talk To Me
 
 +972-50-555-2705
